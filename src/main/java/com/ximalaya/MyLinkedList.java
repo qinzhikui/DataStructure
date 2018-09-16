@@ -62,9 +62,9 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
     }
 
     public void addBefore(Node<AnyType> node, AnyType x) {
-        Node<AnyType> newNode = new Node(x, node, node.next);
-        node.next.prev = newNode;
-        node.next = newNode;
+        Node<AnyType> newNode = new Node(x, node.prev, node);
+        node.prev.next = newNode;
+        node.prev = newNode;
 
         theSize++;
         modCount++;
@@ -167,6 +167,10 @@ public class MyLinkedList<AnyType> implements Iterable<AnyType> {
 
         for (int i = 0; i < 10; i++) {
             myLinkedList.add(i);
+        }
+        Iterator iterator = myLinkedList.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
         }
     }
 }
