@@ -4,8 +4,6 @@ package com.ximalaya;
  * Created by qinzhikui on 20180916
  */
 
-import com.sun.org.apache.bcel.internal.generic.ANEWARRAY;
-import javax.swing.text.StyledEditorKit.UnderlineAction;
 
 public class BinaryTree<AnyType extends Comparable<? super AnyType>> {
 
